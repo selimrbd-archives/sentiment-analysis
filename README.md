@@ -6,10 +6,10 @@ DoD:
 
 TODOLIST:
 
-* :white_check_mark: Build a simple Sentiment Analysis predictive model
-* :white_check_mark: Build an API around the model
-* :white_large_square: Integrate the API with docker
-* :white_large_square: Deploy the docker image on the cloud
+* :heavy_check_mark: Build a simple Sentiment Analysis predictive model
+* :heavy_check_mark: Build an API around the model
+* :white_check_mark: Integrate the API with docker
+* :white_check_mark: Deploy the docker image on the cloud
 
 References:
 * [Dataset - First GOP Debate Twittea Sentimen (Kaggle)](https://www.kaggle.com/crowdflower/first-gop-debate-twitter-sentiment/data)
@@ -19,5 +19,5 @@ References:
 * [Building a Simple Rest API from a Keras model (Keras blog)](https://blog.keras.io/building-a-simple-keras-deep-learning-rest-api.html)
 * [Issue on keras repo regarding using 'predict' asynchronously](https://github.com/keras-team/keras/issues/2397#issuecomment-254919212)
 * [Deep Learning Docker Image](https://github.com/floydhub/dl-docker)
-* [Keras - Tensorflow Docker Image](tensorflow keras docker: https://github.com/ivanvanderbyl/tensorflow-keras-docker/blob/master/Dockerfile)
+* [Keras - Tensorflow Docker Image](https://github.com/ivanvanderbyl/tensorflow-keras-docker/blob/master/Dockerfile)
  
