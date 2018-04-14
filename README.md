@@ -5,7 +5,11 @@ DoD:
 * Basic README on github with installation and usage instructions
 
 TODOLIST:
-:heavy_check_mark: hello
+
+* :white_check_mark: Build a simple Sentiment Analysis predictive model
+* :white_check_mark: Build an API around the model
+* :white_large_square: Integrate the API with docker
+* :white_large_square: Deploy the docker image on the cloud
 
 References:
 * [Dataset - First GOP Debate Twittea Sentimen (Kaggle)](https://www.kaggle.com/crowdflower/first-gop-debate-twitter-sentiment/data)
@@ -13,7 +17,7 @@ References:
 * [Flask Restful python library](https://flask-restful.readthedocs.io/en/latest/quickstart.html)
 * [Miguel Grinberg's blog, excellent tutorials on building APIs in Python](https://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful)
 * [Building a Simple Rest API from a Keras model (Keras blog)](https://blog.keras.io/building-a-simple-keras-deep-learning-rest-api.html)
-* [Issue on keras repo regarding using 'predict' asynchronously](gitub issue on usage graph tensorflow: https://github.com/keras-team/keras/issues/2397#issuecomment-254919212)
+* [Issue on keras repo regarding using 'predict' asynchronously](https://github.com/keras-team/keras/issues/2397#issuecomment-254919212)
 * [Deep Learning Docker Image](https://github.com/floydhub/dl-docker)
 * [Keras - Tensorflow Docker Image](tensorflow keras docker: https://github.com/ivanvanderbyl/tensorflow-keras-docker/blob/master/Dockerfile)
  
