@@ -21,6 +21,17 @@ Example of API call:
 curl localhost:5000 -X PUT -d "data= This is fantastic !"
 ```
 
+#### docker
+
+Build a docker image called keras-1 from the Dockerfile
+```
+docker build -f Dockerfile -t keras-1 .
+```
+Run the docker image, exposing port 5000 of the container onto port 6000 of the host
+```
+docker run -it keras-1 -port 6000:5000
+```
+
 
 ### References
 * [Dataset - First GOP Debate Twittea Sentimen (Kaggle)](https://www.kaggle.com/crowdflower/first-gop-debate-twitter-sentiment/data)
