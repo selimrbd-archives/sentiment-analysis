@@ -38,9 +38,10 @@ docker run -d -t -p 6000:5000 keras-1
 * [Dataset - First GOP Debate Twittea Sentimen (Kaggle)](https://www.kaggle.com/crowdflower/first-gop-debate-twitter-sentiment/data)
 * [keras LSTM sentiment analysis (Kaggle kernel)](https://www.kaggle.com/ngyptr/lstm-sentiment-analysis-keras)
 * [Flask Restful python library](https://flask-restful.readthedocs.io/en/latest/quickstart.html)
+* [Deploying your keras model (Alon Burg)](https://medium.com/@burgalon/deploying-your-keras-model-35648f9dc5fb)
 * [Miguel Grinberg's blog, excellent tutorials on building APIs in Python](https://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful)
 * [Building a Simple Rest API from a Keras model (Keras blog)](https://blog.keras.io/building-a-simple-keras-deep-learning-rest-api.html)
 * [Issue on keras repo regarding using 'predict' asynchronously](https://github.com/keras-team/keras/issues/2397#issuecomment-254919212)
 * [Deep Learning Docker Image](https://github.com/floydhub/dl-docker)
 * [Keras - Tensorflow Docker Image](https://github.com/ivanvanderbyl/tensorflow-keras-docker/blob/master/Dockerfile)
- 
+* [Docker Deploys (heroku official doc)](https://devcenter.heroku.com/articles/container-registry-and-runtime) 

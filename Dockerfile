@@ -61,5 +61,6 @@ RUN pip3 --no-cache-dir install flask==0.12 flask_restful==0.3.6
 ADD ./app.py /srv/
 ADD ./cfg /srv/cfg
 
-
+# Run the APP
+CMD python3 app.py & /bin/bash
 
