@@ -11,7 +11,18 @@ TODOLIST:
 * :white_check_mark: Integrate the API with docker
 * :white_check_mark: Deploy the docker image on the cloud
 
-References:
+
+### Instructions
+
+**WORK IN PROGRESS**
+
+Example of API call:
+```
+curl localhost:5000 -X PUT -d "data= This is fantastic !"
+```
+
+
+### References
 * [Dataset - First GOP Debate Twittea Sentimen (Kaggle)](https://www.kaggle.com/crowdflower/first-gop-debate-twitter-sentiment/data)
 * [keras LSTM sentiment analysis (Kaggle kernel)](https://www.kaggle.com/ngyptr/lstm-sentiment-analysis-keras)
 * [Flask Restful python library](https://flask-restful.readthedocs.io/en/latest/quickstart.html)
