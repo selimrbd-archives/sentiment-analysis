@@ -12,9 +12,7 @@ TODOLIST:
 * :white_check_mark: Deploy the docker image on the cloud
 
 
-### Instructions
-
-**WORK IN PROGRESS**
+### Instructions (WORK IN PROGRESS)
 
 Example of API call:
 ```
@@ -24,12 +22,15 @@ curl localhost:5000 -X PUT -d "data= This is fantastic !"
 #### docker
 
 Build a docker image called keras-1 from the Dockerfile
-```
+```{bash}
 docker build -f Dockerfile -t keras-1 .
 ```
 Run the docker image, exposing port 5000 of the container onto port 6000 of the host
-```
+```{bash}
+## in interactive mode
 docker run -it -p 6000:5000 keras-1
+## in detached mode
+docker run -d -t -p 6000:5000 keras-1
 ```
 
 
