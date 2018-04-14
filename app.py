@@ -51,6 +51,8 @@ app = Flask(__name__)
 api = Api(app)
 
 class PredictSentiment(Resource):
+	def get(self):
+		return('Hello, World!')
 	def put(self):
 		text = request.form['data']
 		ret  = predict_sentiment(text)
@@ -63,4 +65,4 @@ if __name__ == '__main__':
 	print(("* Loading Keras model and Flask starting server..."
 		"please wait until server has fully started"))
 	load_model()
-	app.run(debug = True)
+	app.run('0.0.0.0', port = 5000, debug = True)

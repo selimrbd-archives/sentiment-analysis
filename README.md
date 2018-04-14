@@ -8,7 +8,7 @@ TODOLIST:
 
 * :heavy_check_mark: Build a simple Sentiment Analysis predictive model
 * :heavy_check_mark: Build an API around the model
-* :white_check_mark: Integrate the API with docker
+* :heavy_check_mark: Integrate the API with docker
 * :white_check_mark: Deploy the docker image on the cloud
 
 
