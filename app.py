@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 from flask_restful import Resource, Api
 import pickle
 import numpy as np
-import sys
+import sys, os
 import keras
 import tensorflow as tf
 from keras.preprocessing.sequence import pad_sequences
@@ -65,4 +65,6 @@ if __name__ == '__main__':
 	print(("* Loading Keras model and Flask starting server..."
 		"please wait until server has fully started"))
 	load_model()
-	app.run('0.0.0.0', port = 5000, debug = True)
+	port = int(os.environ['PORT']) if 'PORT' in os.environ.keys() else 8080
+	print('Using port {}'.format(port))
+	app.run('0.0.0.0', port = port, debug = True)

@@ -1,40 +1,75 @@
 # Sentiment Analysis API in Python
 
 DoD:
-* Working sentiment analysis API deployed on Docker and in the cloud
-* Basic README on github with installation and usage instructions
+* :heavy_check_mark: Working sentiment analysis API deployed on Docker and in the cloud
+* :heavy_check_mark: Basic README on github with installation and usage instructions
 
 TODOLIST:
-
 * :heavy_check_mark: Build a simple Sentiment Analysis predictive model
 * :heavy_check_mark: Build an API around the model
 * :heavy_check_mark: Integrate the API with docker
-* :white_check_mark: Deploy the docker image on the cloud
+* :heavy_check_mark: Deploy the docker image on the cloud
 
+## Goal
 
-### Instructions (WORK IN PROGRESS)
+This project's goal is to deploy a simple deep learning model for sentiment analysis as an API on the cloud.
+* The model is built using [keras](https://keras.io/) with the [tensorflow](https://www.tensorflow.org/) backend
+* The API is built using [flask](http://flask.pocoo.org/) and it's extension [restful_flask](https://flask-restful.readthedocs.io/en/latest/)
+* The app is deployed on [Heroku](https://www.heroku.com/)
 
-Example of API call:
+## Testing the app
+
+To test the app (if it's still up and running when you're reading this!), run the following in the command line, specifying a sentence of your choice:
 ```
-curl localhost:5000 -X PUT -d "data= This is fantastic !"
+curl https://srbd-sentiment-v0.herokuapp.com -X PUT -d "data=This is fantastic !"
+``` 
+The API returns the predicted sentiment as well as its score, in JSON format:
+```
+{
+  "score": "0.937636", 
+  "sentiment": "Positive"
+}
 ```
 
-#### docker
+## Installation instructions (WORK IN PROGRESS)
 
-Build a docker image called keras-1 from the Dockerfile
+### Building and running the docker image
+
+Clone this repository locally and run the following command to create a docker image containing the app:
+
 ```{bash}
-docker build -f Dockerfile -t keras-1 .
+docker build -f Dockerfile -t sentiment-v0 .
 ```
-Run the docker image, exposing port 5000 of the container onto port 6000 of the host
+
+To run the docker image, exposing port 8080 of the container onto port 6000 of the host:
 ```{bash}
 ## in interactive mode
-docker run -it -p 6000:5000 keras-1
+docker run -it -p 6000:8080 keras-1
 ## in detached mode
-docker run -d -t -p 6000:5000 keras-1
+docker run -d -t -p 6000:8080 keras-1
+```
+Note: The flask app will expose on port $PORT if the environment variable is defined, else on port 8080
+
+### Calling the API
+
+Example of API call when run locally on port 6000:
+```
+## hello-world (to check that the app is up and running)
+curl localhost:6000
+## get sentiment analysis
+curl localhost:6000 -X PUT -d "data= This is fantastic !"
 ```
 
+### Deploying on Heroku
 
-### References
+[Follow these instructions](https://devcenter.heroku.com/articles/container-registry-and-runtime). Make sure beforehand to install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)  
+
+Remarks: 
+* It can be useful to check out heroku logs to debug the app in case it's not working. Try the following command: ``` heroku logs --app name-of-your-app```
+* On Heroku, the app is automatically binded on standard web ports (80 or 443), you therefore shouldn't specify any port in your API call.
+
+
+## References
 * [Dataset - First GOP Debate Twittea Sentimen (Kaggle)](https://www.kaggle.com/crowdflower/first-gop-debate-twitter-sentiment/data)
 * [keras LSTM sentiment analysis (Kaggle kernel)](https://www.kaggle.com/ngyptr/lstm-sentiment-analysis-keras)
 * [Flask Restful python library](https://flask-restful.readthedocs.io/en/latest/quickstart.html)

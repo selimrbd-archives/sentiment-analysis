@@ -62,5 +62,5 @@ ADD ./app.py /srv/
 ADD ./cfg /srv/cfg
 
 # Run the APP
-CMD python3 app.py & /bin/bash
+CMD python3 app.py
 
