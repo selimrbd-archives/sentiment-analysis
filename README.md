@@ -44,9 +44,9 @@ docker build -f Dockerfile -t sentiment-v0 .
 To run the docker image, exposing port 8080 of the container onto port 6000 of the host:
 ```{bash}
 ## in interactive mode
-docker run -it -p 6000:8080 keras-1
+docker run -it -p 6000:8080 sentiment-v0
 ## in detached mode
-docker run -d -t -p 6000:8080 keras-1
+docker run -d -t -p 6000:8080 sentiment-v0
 ```
 Note: The flask app will expose on port $PORT if the environment variable is defined, else on port 8080
 
@@ -57,7 +57,7 @@ Example of API call when run locally on port 6000:
 ## hello-world (to check that the app is up and running)
 curl localhost:6000
 ## get sentiment analysis
-curl localhost:6000 -X PUT -d "data= This is fantastic !"
+curl localhost:6000 -X PUT -d "data= I am totally in love with this !"
 ```
 
 ### Deploying on Heroku
