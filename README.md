@@ -80,3 +80,7 @@ Remarks:
 * [Deep Learning Docker Image](https://github.com/floydhub/dl-docker)
 * [Keras - Tensorflow Docker Image](https://github.com/ivanvanderbyl/tensorflow-keras-docker/blob/master/Dockerfile)
 * [Docker Deploys (heroku official doc)](https://devcenter.heroku.com/articles/container-registry-and-runtime) 
+
+## Contributing
+
+I Welcome all pull requests/suggestions/bug reports ! Feel free to drop an issue
